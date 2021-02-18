@@ -20,7 +20,7 @@ using namespace std;
 #define IO_Problem                 freopen("input.txt", "r", stdin); freopen("output.txt", "w", stdout);
 
 
-vector<int> left_max(vector<int>&hist){
+vector<int> left_min(vector<int>&hist){
 
     stack<int>s;
     vector<int> ans(hist.size());
@@ -43,7 +43,7 @@ vector<int> left_max(vector<int>&hist){
 }
 
 
-vector<int> right_max(vector<int>&hist){
+vector<int> right_min(vector<int>&hist){
 
      stack<int>s;
     vector<int> ans(hist.size());
@@ -72,8 +72,8 @@ void largest_area( vector<int>& hist){
 
     int max_area = 0;
 
-    vector<int>left = left_max(hist);
-   vector<int>right = right_max(hist);
+    vector<int>left = left_min(hist);
+   vector<int>right = right_min(hist);
 
     for (int i = 0; i < hist.size(); ++i) {
 
